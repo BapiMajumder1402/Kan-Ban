@@ -1,5 +1,7 @@
 .App {
   min-height: 100vh;
   min-width: 100vw;
-  background-color: #252525;
+  background-image: url("https://directlinedev.com/media/cases/rooney/header/background_1_zM58lsj.wide.jpeg");
+  background-repeat: no-repeat;
+  background-position: fixed;
 }

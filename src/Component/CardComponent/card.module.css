@@ -1,0 +1,31 @@
+.card {
+  border-radius: 10px;
+  margin-top: 1rem;
+  background-color: #ffffff;
+  padding: 16px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  /* Add any other desired styles */
+}
+.container {
+  border-radius: 10px;
+  background-color: #f1f2f4;
+}
+.addBtn {
+  font-size: 0.8rem;
+  font-weight: 650;
+  padding: 0.2rem;
+  border-radius: 8px;
+}
+.addBtn:hover {
+  background-color: #d2d1d1;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.btns > svg {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff0000;
+}

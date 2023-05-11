@@ -19,12 +19,11 @@ export default function List() {
                     size='md'
                     height='45px'
                     width='200px'
-                    color='white'
-                    backgroundColor='#252525'
+                    color='#fffff'
+                    backgroundColor='#f1f2f4'
                     border='none'
                     onClick={toogle}
-                    className={list.main_btn}
-                >
+                    className={list.main_btn}>
                     + Add Title
                 </Button> : <Card>
                     <CardBody >
@@ -35,7 +34,6 @@ export default function List() {
                             </Button>
                             <AiOutlineCloseCircle onClick={toogle} />
                         </div>
-
                     </CardBody>
                 </Card>}
             <CardComponent/>

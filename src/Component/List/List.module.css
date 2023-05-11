@@ -1,7 +1,11 @@
 .mainContainer{
-    /* height: 100%; */
+    
+    margin-left: 2rem;
+    /* background-color: #f1f2f4; */
+    padding: 2rem;
+    /* min-height: 100; */
     width: 25vw;
-    box-shadow: 0 0 5px white;
+    /* box-shadow: 0 0 5px white; */
 }
 .input_close{
     display: flex;
@@ -13,5 +17,12 @@
     font-size: 1.5rem;
 }
 .main_btn:hover{
-    color: #252525;
+
+    background-color: #ffffff !important;
+    color:  #252525;
+}
+.main_btn{
+    color: #ffffff;
+    opacity: .5;
+    background: transparent !important;
 }
