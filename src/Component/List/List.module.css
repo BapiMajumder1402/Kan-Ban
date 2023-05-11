@@ -1,0 +1,17 @@
+.mainContainer{
+    /* height: 100%; */
+    width: 25vw;
+    box-shadow: 0 0 5px white;
+}
+.input_close{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.input_close>svg{
+    color:  #FF0000;
+    font-size: 1.5rem;
+}
+.main_btn:hover{
+    color: #252525;
+}
