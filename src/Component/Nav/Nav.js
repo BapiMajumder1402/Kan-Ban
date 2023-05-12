@@ -4,7 +4,7 @@ import nav from './Nav.module.css'
 function Nav() {
   return (
     <div className={nav.main}>
-      <div> KAN-BAN</div>
+      <div className={nav.left}> KAN-BAN</div>
       <div className={nav.right}>
         
         <p>Ankur</p>

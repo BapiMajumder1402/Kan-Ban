@@ -12,16 +12,19 @@ export default function List() {
         setshow(!show)
     }
 
+
     return (
         <div className={list.mainContainer}>
+            <div><CardComponent/></div>
+            <div>
             {!show ?
                 <Button
                     size='md'
                     height='45px'
-                    width='200px'
+                    width='180px'
                     color='#fffff'
                     backgroundColor='#f1f2f4'
-                    border='none'
+                    border='2px'
                     onClick={toogle}
                     className={list.main_btn}>
                     + Add Title
@@ -35,8 +38,8 @@ export default function List() {
                             <AiOutlineCloseCircle onClick={toogle} />
                         </div>
                     </CardBody>
-                </Card>}
-            <CardComponent/>
+                </Card>}</div>
+            
         </div>
     )
 }
