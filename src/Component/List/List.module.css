@@ -23,7 +23,23 @@
     color:  #252525;
 }
 .main_btn{
+    margin-left: 1rem;
     color: #ffffff;
     opacity: .5;
     background: transparent !important;
+}
+.box{
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    margin-right: 1.2rem;
+    padding: 1.2rem;
+    border-radius: 18px;
+    background-color: #f1f2f4;
+    
+}
+.title{
+    margin-right: 1.2rem;
+    padding: 1.2rem;
+    border-radius: 18px;
+    display: flex;
 }
