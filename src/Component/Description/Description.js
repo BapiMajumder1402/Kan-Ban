@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import d from "./Description.module.css";
+import {GrMore} from 'react-icons/gr'
 import {
   Modal,
   ModalOverlay,
@@ -44,7 +45,7 @@ function Description() {
 
   return (
     <div>
-      <Button onClick={onOpen}>Open Modal</Button>
+      <GrMore onClick={onOpen}/>
       <Modal
         closeOnOverlayClick={false}
         isOpen={isOpen}
