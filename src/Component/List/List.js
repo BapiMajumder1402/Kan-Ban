@@ -7,6 +7,7 @@ import { Input } from '@chakra-ui/react'
 import { AiOutlineCloseCircle } from 'react-icons/ai'
 import { ListAtom } from '../Atom/Atom'
 import { useRecoilState } from 'recoil'
+import {MdDeleteForever} from 'react-icons/md'
 
 export default function List() {
     const [listInput, setListInput] = useState("")
@@ -15,25 +16,33 @@ export default function List() {
     function toogle() {
         setshow(!show)
     }
+    function handleDelete(id){
+        const updatedList=mainList.filter((item) => item.listId !== id);
+        setMainList(updatedList);
+    }
     function handleListInput(){
-        setMainList([...mainList,listInput])
+        const newList ={
+            listId:Date.now()+Math.random()*1000,
+            listTitle: listInput,
+            listDate : new Date(),
+            task :[],
+        } 
+        setMainList([...mainList,newList])
         setshow(!show)
+        localStorage.setItem("List" , JSON.stringify(mainList))
         setListInput("")
-        
     }
         console.log(mainList)
-
     return (
         <div className={list.mainContainer}>
             <div className={list.title}>
-                {mainList.map((item , index)=>{
-                    return(<div className={list.box} key={index}>
-                        {item}
+                {mainList.map((item )=>{
+                    return(<div className={list.box} key={item.listId}>
+                        {item.listTitle} < MdDeleteForever onClick={() => handleDelete(item.listId)}/>
                         <div><CardComponent/></div>
                         </div>)
                 })}
             </div>
-            {/* <div><CardComponent/></div> */}
             <div>
             {!show ?
                 <Button
