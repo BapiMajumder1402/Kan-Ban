@@ -28,12 +28,13 @@ export default function List() {
             listId:Date.now()+Math.random()*1000,
             listTitle: listInput,
             listDate : new Date(),
-            task :[],
+            tasklist :[],
         } 
         setMainList([...mainList,newList])
         setshow(!show)
-        localStorage.setItem("List" , JSON.stringify(mainList))
+        localStorage.setItem("List" , JSON.stringify([...mainList,newList]))
         setListInput("")
+        
     }
         console.log(mainList)
 
@@ -43,7 +44,7 @@ export default function List() {
                 {mainList.map((item )=>{
                     return(<div className={list.box} key={item.listId}>
                         {item.listTitle} < MdDeleteForever onClick={() => handleDelete(item.listId)}/>
-                        <div><CardComponent/></div>
+                        <div><CardComponent id= {item.listId} tasklist={item.tasklist}/></div>
                         </div>)
                 })}
             </div>
@@ -70,7 +71,6 @@ export default function List() {
                         </div>
                     </CardBody>
                 </Card>}</div>
-            
         </div>
     )
 }
