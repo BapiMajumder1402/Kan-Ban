@@ -13,13 +13,16 @@ export default function List() {
     const [listInput, setListInput] = useState("")
     const [mainList , setMainList ] = useRecoilState(ListAtom)
     const [show, setshow] = useState(false)
+    
     function toogle() {
         setshow(!show)
     }
+
     function handleDelete(id){
         const updatedList=mainList.filter((item) => item.listId !== id);
         setMainList(updatedList);
     }
+
     function handleListInput(){
         const newList ={
             listId:Date.now()+Math.random()*1000,
@@ -33,6 +36,7 @@ export default function List() {
         setListInput("")
     }
         console.log(mainList)
+
     return (
         <div className={list.mainContainer}>
             <div className={list.title}>
